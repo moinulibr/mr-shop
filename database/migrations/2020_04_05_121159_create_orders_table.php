@@ -18,8 +18,8 @@ class CreateOrdersTable extends Migration
             $table->string('code', 170)->unique();
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('shipping_method_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('shipping_method_id')->references('id')->on('shipping_methods');
+           // $table->foreign('user_id')->references('id')->on('users');
+           // $table->foreign('shipping_method_id')->references('id')->on('shipping_methods');
 
             $table->enum('status', ['pending', 'processing', 'completed', 'decline'])->default('pending');
 

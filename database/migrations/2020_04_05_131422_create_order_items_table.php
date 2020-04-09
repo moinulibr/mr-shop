@@ -21,9 +21,9 @@ class CreateOrderItemsTable extends Migration
             $table->decimal('quantity', 20, 2);
             $table->decimal('price', 20, 2);
 
-            $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->foreign('variation_value_id')->references('id')->on('variation_values')->onDelete('cascade');
+            //$table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade');
+            //$table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            //$table->foreign('variation_value_id')->references('id')->on('variation_values')->onDelete('cascade');
 
             $table->softDeletes();
             $table->timestamps();
